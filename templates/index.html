@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+<link rel="stylesheet" href="/static/css/bootstrap.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163793624-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163793624-2');
+</script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="container-fluid"> 
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header"> <a class="navbar-brand" href="#">Cyxc</a> </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">首页</a></li>
+          <li><a href="/serverlist">服务器列表</a></li>
+          <li><a href="#joinus" onClick="window.open('/joinus','targetWindow','resizable, height=600,width=600'); return false;">加入玩家群</a></li>
+          <li><a href="/api">API</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+<div class="container">
+  <div class="jumbotron">
+    <h1>这里是陈阳小草Iss服务器</h1>
+    <p>点服务器列表可以查看服务器实时人数</p>
+    <p>方便挤进去</p>
+    <p>比在游戏刷新快</p>
+    <p><a class="btn btn-primary btn-lg" href="/serverlist" role="button">服务器列表</a></p>
+  </div>
+</div>
+<div>
+  <footer>
+    <p> <span style="color: #b9b9b9;"> Program developed by <a href="https://cyxc.club" target="_blank" style="color: #b9b9b9;">cyxc.</a><a href="http://www.beian.miit.gov.cn" target="_blank" style="color: #b9b9b9;">京ICP备19009481号-4</a> </span> </p>
+  </footer>
+</div>
+</body>
+</html>
