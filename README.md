@@ -3,17 +3,27 @@
 使用 [flask] 构建后台。  
 使用 [python-a2s] 查询服务器信息查询。
 
+## 依赖
+
+python-a2s flask-script
+
 ## 本地运行
 
-运行 `python3 app.py` 用浏览器打开 [http://localhost:8090](http://localhost:8090)
+运行 `python3 manage.py runserver -h 0.0.0.0 -p 8090` 用浏览器打开 [http://localhost:8090](http://localhost:8090)
 
 ## 部署
 
 关于flask部署 [Deployment Options]。 这里放了一个我正在使用的gunicorn文件 `gunicorn.conf`。
 
 ## 更新日志
+
+### 2020年5月24日(ver1.2.0)
+- 使用flask-script构建项目
+- 添加了mod下载的页面
+- 添加了合作服务器列表
+
 ### 2020年5月23日(ver1.1.2)
-- 把nav单独拿出来了
+- 把nav和footer单独拿出来了
 
 ### 2020年5月11日(ver1.1.1)
 - 增加了判断服务器是否在线的方法，如果不在线则会在相应的位置留空而不是整体页面显示xx服错误
