@@ -40,10 +40,9 @@
       <table class="table table-striped">
         <colgroup>
 		<col class="col-xs-1">
-        <col class="col-xs-4">
-        <col class="col-xs-4">
+        <col class="col-xs-5">
+        <col class="col-xs-3">
         <col class="col-xs-2">
-        <col class="col-xs-6">
         </colgroup>
         <thead>
           <tr>
@@ -51,108 +50,69 @@
             <th>名字</th>
             <th>地图</th>
             <th>人数</th>
-            <th>点我看详细信息</th>
           </tr>
         </thead>
         {% if status == "Success" or status == "InfoOnly" %}
         <tbody>
           <tr>
             <td>{{	Status1	}}</td>
-			<td>{{ info1.server_name }}</td>
+			<td><a href="/xiaocaoserverlist/xiaocao1" style="text-decoration:none">{{ info1.server_name }}</a></td>
             <td>{{ info1.map_name }}</td>
             <td>{{ info1.player_count }}/{{ info1.max_players }}</td>
-            <td><a href="/serverlist/iss1" style="text-decoration:none">1服详情</a></td>
           </tr>
           <tr>
 			<td>{{	Status2	}}</td>
-            <td>{{ info2.server_name }}</td>
+            <td><a href="/xiaocaoserverlist/xiaocao2" style="text-decoration:none">{{ info2.server_name }}</a></td>
             <td>{{ info2.map_name }}</td>
             <td>{{ info2.player_count }}/{{ info2.max_players }}</td>
-            <td><a href="/serverlist/iss2" style="text-decoration:none">2服详情</a></td>
           </tr>
           <tr>
 			<td>{{	Status3	}}</td>
-            <td>{{ info3.server_name }}</td>
+            <td><a href="/xiaocaoserverlist/xiaocao3" style="text-decoration:none">{{ info3.server_name }}</a></td>
             <td>{{ info3.map_name }}</td>
             <td>{{ info3.player_count }}/{{ info3.max_players }}</td>
-            <td><a href="/serverlist/iss3" style="text-decoration:none">3服详情</a></td>
           </tr>
           <tr>
 			<td>{{	Status4	}}</td>
-            <td>{{ info4.server_name }}</td>
+            <td><a href="/xiaocaoserverlist/xiaocao4" style="text-decoration:none">{{ info4.server_name }}</a></td>
             <td>{{ info4.map_name }}</td>
             <td>{{ info4.player_count }}/{{ info4.max_players }}</td>
-            <td><a href="/serverlist/iss4" style="text-decoration:none">4服详情</a></td>
           </tr>
           <tr>
 			<td>{{	Status5	}}</td>
-            <td>{{ info5.server_name }}</td>
+            <td><a href="/xiaocaoserverlist/xiaocao5" style="text-decoration:none">{{ info5.server_name }}</a></td>
             <td>{{ info5.map_name }}</td>
             <td>{{ info5.player_count }}/{{ info5.max_players }}</td>
-            <td><a href="/serverlist/iss5" style="text-decoration:none">5服详情</a></td>
           </tr>
           <tr>
 			<td>{{	Status6	}}</td>
-            <td>{{ info6.server_name }}</td>
+            <td><a href="/xiaocaoserverlist/xiaocao6" style="text-decoration:none">{{ info6.server_name }}</a></td>
             <td>{{ info6.map_name }}</td>
             <td>{{ info6.player_count }}/{{ info6.max_players }}</td>
-            <td><a href="/serverlist/iss6" style="text-decoration:none">6服详情</a></td>
           </tr>
           <tr>
 			<td>{{	Status7	}}</td>
-            <td>{{ info7.server_name }}</td>
+            <td><a href="/xiaocaoserverlist/xiaocao7" style="text-decoration:none">{{ info7.server_name }}</a></td>
             <td>{{ info7.map_name }}</td>
             <td>{{ info7.player_count }}/{{ info7.max_players }}</td>
-            <td><a href="/serverlist/iss7" style="text-decoration:none">7服详情</a></td>
           </tr>
           <tr>
 			<td>{{	Status8	}}</td>
-            <td>{{ info8.server_name }}</td>
+            <td><a href="/xiaocaoserverlist/xiaocao8" style="text-decoration:none">{{ info8.server_name }}</a></td>
             <td>{{ info8.map_name }}</td>
             <td>{{ info8.player_count }}/{{ info8.max_players }}</td>
-            <td><a href="/serverlist/iss8" style="text-decoration:none">8服详情</a></td>
           </tr>
           <tr>
 			<td>{{	Status9	}}</td>
-            <td>{{ info9.server_name }}</td>
+            <td><a href="/xiaocaoserverlist/xiaocao9" style="text-decoration:none">{{ info9.server_name }}</a></td>
             <td>{{ info9.map_name }}</td>
             <td>{{ info9.player_count }}/{{ info9.max_players }}</td>
-            <td><a href="/serverlist/iss9" style="text-decoration:none">9服详情</a></td>
           </tr>
           <tr>
 			<td>{{	Status10	}}</td>
-            <td>{{ info10.server_name }}</td>
+            <td><a href="/xiaocaoserverlist/xiaocao10" style="text-decoration:none">{{ info10.server_name }}</a></td>
             <td>{{ info10.map_name }}</td>
             <td>{{ info10.player_count }}/{{ info10.max_players }}</td>
-            <td><a href="/serverlist/iss10" style="text-decoration:none">10服详情</a></td>
-          </tr>
-          <tr>
-			<td>{{	Status11	}}</td>
-            <td>{{ info11.server_name }}</td>
-            <td>{{ info11.map_name }}</td>
-            <td>{{ info11.player_count }}/{{ info11.max_players }}</td>
-            <td><a href="/serverlist/iss11" style="text-decoration:none">11服详情</a></td>
-          </tr>
-          <tr>
-			<td>{{	Status12	}}</td>
-            <td>{{ info12.server_name }}</td>
-            <td>{{ info12.map_name }}</td>
-            <td>{{ info12.player_count }}/{{ info12.max_players }}</td>
-            <td><a href="/serverlist/iss12" style="text-decoration:none">12服详情</a></td>
-          </tr>
-          <tr>
-			<td>{{	Status13	}}</td>
-            <td>{{ info13.server_name }}</td>
-            <td>{{ info13.map_name }}</td>
-            <td>{{ info13.player_count }}/{{ info13.max_players }}</td>
-            <td><a href="/serverlist/iss13" style="text-decoration:none">13服详情</a></td>
-          </tr>
-          <tr>
-			<td>{{	Status13	}}</td>
-            <td>{{ info14.server_name }}</td>
-            <td>{{ info14.map_name }}</td>
-            <td>{{ info14.player_count }}/{{ info14.max_players }}</td>
-            <td><a href="/serverlist/iss14" style="text-decoration:none">14服详情</a></td>
           </tr>
         </tbody>
         {% endif %} {# status == "Success" or status == "InfoOnly" #}
