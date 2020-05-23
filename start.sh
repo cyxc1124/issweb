@@ -1,1 +1,1 @@
-gunicorn app:app -c gunicorn.conf
+gunicorn manage:app -c gunicorn.conf
