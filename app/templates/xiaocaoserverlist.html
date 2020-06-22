@@ -18,6 +18,7 @@
 </div>
 {% endif %}
 <div class="container">
+<div class="col-md-12">
   <div class="panel panel-success">
     <div class="panel-heading">
       <h3 class="panel-title">服务器列表</h3>
@@ -26,9 +27,10 @@
       <table class="table table-striped">
         <colgroup>
 		<col class="col-xs-1">
-        <col class="col-xs-5">
+        <col class="col-xs-6">
         <col class="col-xs-3">
         <col class="col-xs-2">
+		<col class="col-xs-1">
         </colgroup>
         <thead>
           <tr>
@@ -36,6 +38,7 @@
             <th>名字</th>
             <th>地图</th>
             <th>人数</th>
+			<th></th>
           </tr>
         </thead>
         {% if status == "Success" or status == "InfoOnly" %}
@@ -45,60 +48,70 @@
 			<td><a href="/xiaocaoserverlist/xiaocao1" style="text-decoration:none">{{ info1.server_name }}</a></td>
             <td>{{ info1.map_name }}</td>
             <td>{{ info1.player_count }}/{{ info1.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27100">复制ip</button></td>
           </tr>
           <tr>
 			<td>{{	Status2	}}</td>
             <td><a href="/xiaocaoserverlist/xiaocao2" style="text-decoration:none">{{ info2.server_name }}</a></td>
             <td>{{ info2.map_name }}</td>
             <td>{{ info2.player_count }}/{{ info2.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27110">复制ip</button></td>
           </tr>
           <tr>
 			<td>{{	Status3	}}</td>
             <td><a href="/xiaocaoserverlist/xiaocao3" style="text-decoration:none">{{ info3.server_name }}</a></td>
             <td>{{ info3.map_name }}</td>
             <td>{{ info3.player_count }}/{{ info3.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27120">复制ip</button></td>
           </tr>
           <tr>
 			<td>{{	Status4	}}</td>
             <td><a href="/xiaocaoserverlist/xiaocao4" style="text-decoration:none">{{ info4.server_name }}</a></td>
             <td>{{ info4.map_name }}</td>
             <td>{{ info4.player_count }}/{{ info4.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27130">复制ip</button></td>
           </tr>
           <tr>
 			<td>{{	Status5	}}</td>
             <td><a href="/xiaocaoserverlist/xiaocao5" style="text-decoration:none">{{ info5.server_name }}</a></td>
             <td>{{ info5.map_name }}</td>
             <td>{{ info5.player_count }}/{{ info5.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27140">复制ip</button></td>
           </tr>
           <tr>
 			<td>{{	Status6	}}</td>
             <td><a href="/xiaocaoserverlist/xiaocao6" style="text-decoration:none">{{ info6.server_name }}</a></td>
             <td>{{ info6.map_name }}</td>
             <td>{{ info6.player_count }}/{{ info6.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27150">复制ip</button></td>
           </tr>
           <tr>
 			<td>{{	Status7	}}</td>
             <td><a href="/xiaocaoserverlist/xiaocao7" style="text-decoration:none">{{ info7.server_name }}</a></td>
             <td>{{ info7.map_name }}</td>
             <td>{{ info7.player_count }}/{{ info7.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27160">复制ip</button></td>
           </tr>
           <tr>
 			<td>{{	Status8	}}</td>
             <td><a href="/xiaocaoserverlist/xiaocao8" style="text-decoration:none">{{ info8.server_name }}</a></td>
             <td>{{ info8.map_name }}</td>
             <td>{{ info8.player_count }}/{{ info8.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27170">复制ip</button></td>
           </tr>
           <tr>
 			<td>{{	Status9	}}</td>
             <td><a href="/xiaocaoserverlist/xiaocao9" style="text-decoration:none">{{ info9.server_name }}</a></td>
             <td>{{ info9.map_name }}</td>
             <td>{{ info9.player_count }}/{{ info9.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27180">复制ip</button></td>
           </tr>
           <tr>
 			<td>{{	Status10	}}</td>
             <td><a href="/xiaocaoserverlist/xiaocao10" style="text-decoration:none">{{ info10.server_name }}</a></td>
             <td>{{ info10.map_name }}</td>
             <td>{{ info10.player_count }}/{{ info10.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27190">复制ip</button></td>
           </tr>
         </tbody>
         {% endif %} {# status == "Success" or status == "InfoOnly" #}
@@ -106,6 +119,23 @@
     </div>
   </div>
 </div>
+</div>
 {% include 'include/footer.html' %}
 </body>
+<script>
+var clipboard = new ClipboardJS('.btn');
+ 
+clipboard.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+	
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+</script>
 </html>

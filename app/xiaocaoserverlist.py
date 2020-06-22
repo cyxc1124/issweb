@@ -130,7 +130,7 @@ def xiaocaolist():
     elif isinstance(info_except3, a2s.BrokenMessageError):
         status3 = '错误'
         info_res3 = 'null'
-    elif info_except1 is None:
+    elif info_except3 is None:
         info_res3 = info_future3.result()
         status3 = '在线'
 
@@ -140,7 +140,7 @@ def xiaocaolist():
     elif isinstance(info_except4, a2s.BrokenMessageError):
         status4 = '错误'
         info_res4 = 'null'
-    elif info_except1 is None:
+    elif info_except4 is None:
         info_res4 = info_future4.result()
         status4 = '在线'
 
@@ -150,7 +150,7 @@ def xiaocaolist():
     elif isinstance(info_except5, a2s.BrokenMessageError):
         status5 = '错误'
         info_res5 = 'null'
-    elif info_except1 is None:
+    elif info_except5 is None:
         info_res5 = info_future5.result()
         status5 = '在线'
 
@@ -160,7 +160,7 @@ def xiaocaolist():
     elif isinstance(info_except6, a2s.BrokenMessageError):
         status6 = '错误'
         info_res6 = 'null'
-    elif info_except1 is None:
+    elif info_except6 is None:
         info_res6 = info_future6.result()
         status6 = '在线'
 
@@ -170,7 +170,7 @@ def xiaocaolist():
     elif isinstance(info_except7, a2s.BrokenMessageError):
         status7 = '错误'
         info_res7 = 'null'
-    elif info_except1 is None:
+    elif info_except7 is None:
         info_res7 = info_future7.result()
         status7 = '在线'
 

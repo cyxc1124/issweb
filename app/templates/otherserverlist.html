@@ -18,6 +18,7 @@
 </div>
 {% endif %}
 <div class="container">
+<div class="col-md-12">
   <div class="panel panel-success">
     <div class="panel-heading">
       <h3 class="panel-title">服务器列表</h3>
@@ -36,51 +37,94 @@
             <th>名字</th>
             <th>地图</th>
             <th>人数</th>
+			<th></th>
           </tr>
         </thead>
         {% if status == "Success" or status == "InfoOnly" %}
         <tbody>
           <tr>
+            <td>{{	Status0	}}</td>
+			<td><a href="/otherserverlist/other0" style="text-decoration:none">{{ info0.server_name }}</a></td>
+            <td>{{ info0.map_name }}</td>
+            <td>{{ info0.player_count }}/{{ info0.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="134.175.62.172:27131">复制ip</button></td>
+          </tr>
+		  <tr>
             <td>{{	Status1	}}</td>
 			<td><a href="/otherserverlist/other1" style="text-decoration:none">{{ info1.server_name }}</a></td>
             <td>{{ info1.map_name }}</td>
             <td>{{ info1.player_count }}/{{ info1.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27200">复制ip</button></td>
           </tr>
           <tr>
 			<td>{{	Status2	}}</td>
             <td><a href="/otherserverlist/other2" style="text-decoration:none">{{ info2.server_name }}</a></td>
             <td>{{ info2.map_name }}</td>
             <td>{{ info2.player_count }}/{{ info2.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27210">复制ip</button></td>
           </tr>
           <tr>
 			<td>{{	Status3	}}</td>
             <td><a href="/otherserverlist/other3" style="text-decoration:none">{{ info3.server_name }}</a></td>
             <td>{{ info3.map_name }}</td>
             <td>{{ info3.player_count }}/{{ info3.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27220">复制ip</button></td>
           </tr>
           <tr>
 			<td>{{	Status4	}}</td>
             <td><a href="/otherserverlist/other4" style="text-decoration:none">{{ info4.server_name }}</a></td>
             <td>{{ info4.map_name }}</td>
             <td>{{ info4.player_count }}/{{ info4.max_players }}</td>
-          </tr>
-        <tr>
-			<td>{{	Status4	}}</td>
-            <td><a href="/otherserverlist/other5" style="text-decoration:none">{{ info5.server_name }}</a></td>
-            <td>{{ info5.map_name }}</td>
-            <td>{{ info5.player_count }}/{{ info5.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27230">复制ip</button></td>
           </tr>
         <tr>
 			<td>{{	Status6	}}</td>
             <td><a href="/otherserverlist/other6" style="text-decoration:none">{{ info6.server_name }}</a></td>
             <td>{{ info6.map_name }}</td>
             <td>{{ info6.player_count }}/{{ info6.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27250">复制ip</button></td>
           </tr>
         <tr>
 			<td>{{	Status7	}}</td>
             <td><a href="/otherserverlist/other7" style="text-decoration:none">{{ info7.server_name }}</a></td>
             <td>{{ info7.map_name }}</td>
             <td>{{ info7.player_count }}/{{ info7.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27260">复制ip</button></td>
+          </tr>
+		  <tr>
+			<td>{{	Status8	}}</td>
+            <td><a href="/otherserverlist/other8" style="text-decoration:none">{{ info8.server_name }}</a></td>
+            <td>{{ info8.map_name }}</td>
+            <td>{{ info8.player_count }}/{{ info8.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27270">复制ip</button></td>
+          </tr>
+		  <tr>
+			<td>{{	Status9	}}</td>
+            <td><a href="/otherserverlist/other9" style="text-decoration:none">{{ info9.server_name }}</a></td>
+            <td>{{ info9.map_name }}</td>
+            <td>{{ info9.player_count }}/{{ info9.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27280">复制ip</button></td>
+          </tr>
+		  <tr>
+			<td>{{	Status10	}}</td>
+            <td><a href="/otherserverlist/other10" style="text-decoration:none">{{ info10.server_name }}</a></td>
+            <td>{{ info10.map_name }}</td>
+            <td>{{ info10.player_count }}/{{ info10.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27290">复制ip</button></td>
+          </tr>
+		  <tr>
+			<td>{{	Status11	}}</td>
+            <td><a href="/otherserverlist/other11" style="text-decoration:none">{{ info11.server_name }}</a></td>
+            <td>{{ info11.map_name }}</td>
+            <td>{{ info11.player_count }}/{{ info11.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27300">复制ip</button></td>
+          </tr>
+		  <tr>
+			<td>{{	Status12	}}</td>
+            <td><a href="/otherserverlist/other12" style="text-decoration:none">{{ info12.server_name }}</a></td>
+            <td>{{ info12.map_name }}</td>
+            <td>{{ info12.player_count }}/{{ info12.max_players }}</td>
+			<td><button class="btn btn-info btn-xs" data-clipboard-text="119.188.247.66:27310">复制ip</button></td>
           </tr>
         </tbody>
         {% endif %} {# status == "Success" or status == "InfoOnly" #}
@@ -88,6 +132,23 @@
     </div>
   </div>
 </div>
+</div>
 {% include 'include/footer.html' %}
 </body>
+<script>
+var clipboard = new ClipboardJS('.btn');
+ 
+clipboard.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+	
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+</script>
 </html>

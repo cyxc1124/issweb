@@ -18,8 +18,21 @@
 </div>
 {% endif %}
 {% if status == "Success" or status == "InfoOnly" %}
+{% if status == "InfoOnly" %}
 <div class="container">
   <div class="col-md-6">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title">Players</h3>
+      </div>
+      <div class="panel-body"> {{ error }} </div>
+    </div>
+  </div>
+</div>
+{% else %}
+<div class="container">
+  <div class="row">
+		<div class="col-md-6">
     <div class="panel panel-success">
       <div class="panel-heading">
         <h3 class="panel-title">基本信息</h3>
@@ -54,21 +67,7 @@
       </div>
     </div>
   </div>
-</div>
-{% if status == "InfoOnly" %}
-<div class="container">
-  <div class="col-md-6">
-    <div class="panel panel-danger">
-      <div class="panel-heading">
-        <h3 class="panel-title">Players</h3>
-      </div>
-      <div class="panel-body"> {{ error }} </div>
-    </div>
-  </div>
-</div>
-{% else %}
-<div class="container">
-  <div class="col-md-6">
+		<div class="col-md-6">
     <div class="panel panel-success">
       <div class="panel-heading">
         <h3 class="panel-title">玩家列表</h3>
@@ -102,6 +101,7 @@
       </div>
     </div>
   </div>
+	</div>
 </div>
 {% endif %} {# status == "InfoOnly" #}
       {% endif %} {# status == "Success" or status == "InfoOnly" #}
