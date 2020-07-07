@@ -13,7 +13,7 @@ python-a2s flask-script
 
 ## 部署
 
-关于flask部署 [Deployment Options]。 这里放了一个我正在使用的gunicorn文件 `gunicorn.conf`。
+关于flask部署 [Deployment Options]。 这里放了一个我正在使用的gunicorn文件 `gunicorn.conf.py`。
 
 ## 更新日志
 
