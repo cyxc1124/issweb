@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+{% include 'include/head.html' %}
+<title>小草服务器列表</title>
+</head><body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container"> {% include 'include/navbar.html' %}
+        <div class="row">
+          <div class="col-md-12">
+            <div class="container">
+              <h3>#服务器监控</h3>
+              <div class="row-fluid">
+                <div class="span12">
+                  <h4># 网络流量</h4>
+                  <picture class="thumbnail">
+                    <source srcset="/static/image/zabbix/net_traffic.png media="(prefers-color-scheme: dark)">
+                    <img class="img-responsive" src="/static/image/zabbix/net_traffic.png?{{time}}" srcset="/static/image/zabbix/net_traffic.png?{{time}}"> </picture>
+                </div>
+              </div>
+              <div class="row-fluid">
+                <div class="span12">
+                  <h4># CPU</h4>
+                  <picture class="thumbnail">
+                    <source srcset="/static/image/zabbix/cpu_usage.png media="(prefers-color-scheme: dark)">
+                    <img class="img-responsive" src="/static/image/zabbix/cpu_usage.png?{{time}}" srcset="/static/image/zabbix/cpu_usage.png?{{time}}"> </picture>
+                </div>
+              </div>
+              <div class="row-fluid">
+                <div class="span12">
+                  <h4># 内存</h4>
+                  <picture class="thumbnail">
+                    <source srcset="/static/image/zabbix/Memory_usage.png media="(prefers-color-scheme: dark)">
+                    <img class="img-responsive" src="/static/image/zabbix/Memory_usage.png?{{time}}" srcset="/static/image/zabbix/Memory_usage.png?{{time}}"> </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'include/footer.html' %}
+{% include 'include/bootstarp-script.html' %}
+</body>
+</html>

@@ -21,5 +21,7 @@ def create_app():
 
     from app.index import index
     app.register_blueprint(index)
+    
+
 
     return app

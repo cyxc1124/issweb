@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
-<meta charset="UTF-8">
-<title>首页</title>
 {% include 'include/head.html' %}
+<title>首页</title>
 </head>
 <body>
-{% include 'include/nav.html' %}
-<div class="container">
-<div class="col-md-12">
-  <div class="jumbotron">
-    <h1>这里是</h1>
-    <h2>小草&团子Iss服务器</h2>
-    <h5>点服务器列表可以查看服务器实时人数</h5>
-    <h5>方便挤进去</h5>
-    <h5>比在游戏刷新快</h5>
-    <p><a class="btn btn-primary btn-lg" href="/xiaocaoserverlist" role="button">小草服务器列表</a></p>
-    <p><a class="btn btn-primary btn-lg" href="/tuanziserverlist" role="button">团子服务器列表</a></p>
-      <p><a class="btn btn-primary btn-lg" href="/otherserverlist" role="button">合作服务器列表</a></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container">
+	  {% include 'include/navbar.html' %}
+        <div class="row">
+          <div class="col-md-12">
+            <div class="container">
+              <div class="jumbotron bg-transparent">
+                <h1>这里是</h1>
+                <h2>小草&团子Iss服务器</h2>
+                <h5>点服务器列表可以查看服务器实时人数</h5>
+                <h5>方便挤进去</h5>
+                <h5>比在游戏刷新快</h5>
+                <p><a class="btn btn-primary btn-lg" href="/xiaocaoserverlist" role="button">小草服务器列表</a></p>
+                <p><a class="btn btn-primary btn-lg" href="/tuanziserverlist" role="button">团子服务器列表</a></p>
+                <p><a class="btn btn-primary btn-lg" href="/otherserverlist" role="button">合作服务器列表</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-</div>
 {% include 'include/footer.html' %}
+{% include 'include/bootstarp-script.html' %}
 </body>
 </html>

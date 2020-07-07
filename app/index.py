@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, redirect
+import time
 
 index = Blueprint('index', __name__, url_prefix='/')
 
@@ -18,3 +19,7 @@ def doc_rcon():
 @index.route("/about")
 def about():
     return render_template("aboutxiaocao.html")
+    
+@index.route("/zabbix")
+def zabbix():
+    return render_template("zabbix.html",time=time.time())
