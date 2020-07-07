@@ -121,8 +121,8 @@ def otherlist():
     info_except8 = info_future8.exception()
     info_except9 = info_future9.exception()
     info_except10 = info_future10.exception()
-    info_except11 = info_future10.exception()
-    info_except12 = info_future10.exception()
+    info_except11 = info_future11.exception()
+    info_except12 = info_future12.exception()
 
     if isinstance(info_except0, socket.timeout):
         status0 = '离线'
