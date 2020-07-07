@@ -14,6 +14,8 @@ python-a2s flask-script
 ## 部署
 
 关于flask部署 [Deployment Options]。 这里放了一个我正在使用的gunicorn文件 `gunicorn.conf.py`。
+我使用[supervisor](https://github.com/cyxc1124/issweb/wiki/%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2) 进行部署
+
 
 ## 更新日志
 
