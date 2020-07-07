@@ -53,7 +53,7 @@ python-a2s flask-script
 
 ## License
 
-AGPLv3
+AGPL v3
 
 [python-a2s]: https://github.com/Yepoleb/python-a2s
 [flask]: https://flask.palletsprojects.com/en/1.1.x/
