@@ -29,25 +29,24 @@ def format_duration(total_seconds):
 jinja2.filters.FILTERS['duration'] = format_duration
 
 
-def list_server(server_list, type):
+def list_server(server_tuple_list: list, info_type: str):
     servers_info = []
-    for index in range(len(server_list)):
-        try:
-            server_info = a2s.info(server_list[index], timeout=0.2)
+    servers_pool = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=14) as pool:
+        for index in range(len(server_tuple_list)):
+            servers_pool.append(pool.submit(a2s.info, server_tuple_list[index], timeout=QUERY_TIMEOUT))
+    concurrent.futures.wait(servers_pool)
+    for index in range(len(server_tuple_list)):
+        if servers_pool[index].exception() is None:
+            server_info = servers_pool[index].result()
             server_info.status = True
-        except socket.timeout:
-            server_info = ServerInfo()
-            server_info.status = False
-        except a2s.BrokenMessageError:
-            server_info = ServerInfo()
-            server_info.status = False
-        except:
+        else:
             server_info = ServerInfo()
             server_info.status = False
         server_info.info_id = index
-        server_info.info_type = type
-        server_info.info_ip = server_list[index][0]
-        server_info.info_port = server_list[index][1]
+        server_info.info_type = info_type
+        server_info.info_ip = server_tuple_list[index][0]
+        server_info.info_port = server_tuple_list[index][1]
         servers_info.append(server_info)
     return servers_info
 
