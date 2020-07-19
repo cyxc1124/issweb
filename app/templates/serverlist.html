@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    {% include 'include/head.html' %}
+    <title>{{ title }}</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container"> {% include 'include/navbar.html' %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="container">
+                            <div class="card bg-transparent">
+                                <h5 class="card-header alert-success">服务器列表</h5>
+                                <div class="card-body bg-transparent">
+                                    <table class="table table-bordered table-hover table-sm bg-transparent">
+                                        <colgroup>
+                                            <col class="col-xs-1">
+                                            <col class="col-xs-6">
+                                            <col class="col-xs-3">
+                                            <col class="col-xs-2">
+                                            <col class="col-xs-1">
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th>名字</th>
+                                            <th>地图</th>
+                                            <th>人数</th>
+                                            <th></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for info in infos %}
+                                            {% if not info.status %}
+                                                <tr>
+                                                    <td><p title="{{ info.info_ip }}:{{ info.info_port }}">离线</p></td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>
+                                                        <button class="btn btn-info btn-sm"
+                                                                title="{{ info.info_ip }}:{{ info.info_port }}"
+                                                                data-clipboard-text="{{ info.info_ip }}:{{ info.info_port }}">
+                                                            复制ip
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            {% else %}
+                                                <tr>
+                                                    <td><a href="/server_list/{{ info.info_type }}/{{ info.info_id }}"
+                                                           title="{{ info.info_ip }}:{{ info.info_port }}"
+                                                           style="text-decoration:none">{{ info.server_name }}</a></td>
+                                                    <td>{{ info.map_name }}</td>
+                                                    <td>{{ info.player_count }}/{{ info.max_players }}</td>
+                                                    <td>
+                                                        <button class="btn btn-info btn-sm"
+                                                                title="{{ info.info_ip }}:{{ info.info_port }}"
+                                                                data-clipboard-text="{{ info.info_ip }}:{{ info.info_port }}">
+                                                            复制ip
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            {% endif %}
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'include/footer.html' %}
+{% include 'include/bootstarp-script.html' %}
+</body>
+</html>

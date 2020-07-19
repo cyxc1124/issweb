@@ -20,7 +20,7 @@ python-a2s flask-script
 ## 更新日志
 
 ### 2020年7月7日(ver1.3.0)
-- bootstarp版本变更为4.5
+- bootstrap版本变更为4.5
 - 变更了服务器列表的逻辑
 
 ### 2020年6月22日(ver1.2.3)
