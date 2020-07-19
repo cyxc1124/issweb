@@ -16,14 +16,10 @@ class ServerInfo(object):
 
 def format_duration(total_seconds):
     total_seconds = int(total_seconds)
-    hours, remainder = divmod(total_seconds, 3600)
-    minutes, seconds = divmod(remainder, 60)
-    if hours > 0:
-        return "{}h {}m".format(hours, minutes)
-    elif minutes > 0:
-        return "{}m {}s".format(minutes, seconds)
-    else:
-        return "{}s".format(seconds)
+    hours = total_seconds // 3600
+    minutes = total_seconds % 3600 // 60
+    seconds = total_seconds // 60
+    return f'{hours}h {minutes}m' if hours > 0 else f'{minutes}m {seconds}s' if minutes > 0 else f'{seconds}s'
 
 
 jinja2.filters.FILTERS['duration'] = format_duration
