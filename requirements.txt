@@ -1,4 +1,4 @@
 Flask_Script==2.0.6
-Jinja2==2.10
+Jinja2==2.11.3
 Flask==1.1.2
 python_a2s==1.1.4
